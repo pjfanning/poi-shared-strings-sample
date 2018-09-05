@@ -1,0 +1,22 @@
+apply plugin: 'application'
+apply plugin: 'java'
+
+group = 'com.github.pjfanning'
+version = '0.1.0'
+
+mainClassName = 'com.github.pjfanning.poi.sample.Main'
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://repository.apache.org/content/repositories/staging/"
+    }
+    maven {
+        url "https://oss.sonatype.org/content/repositories/snapshots/"
+    }
+}
+
+dependencies {
+    compile 'org.apache.poi:poi-ooxml:4.0.0'
+    compile 'com.github.pjfanning:poi-shared-strings:1.0.0-SNAPSHOT'
+}
