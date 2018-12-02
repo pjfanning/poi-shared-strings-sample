@@ -15,6 +15,6 @@ repositories {
 }
 
 dependencies {
-    compile 'org.apache.poi:poi-ooxml:4.0.0'
-    compile 'com.github.pjfanning:poi-shared-strings:1.0.0'
+    compile 'org.apache.poi:poi-ooxml:4.0.1'
+    compile 'com.github.pjfanning:poi-shared-strings:1.0.1'
 }
