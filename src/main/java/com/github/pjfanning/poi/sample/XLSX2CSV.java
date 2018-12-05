@@ -73,6 +73,11 @@ public class XLSX2CSV {
         }
 
         @Override
+        public void endSheet() {
+            output.println("[endSheet called]");
+        }
+
+        @Override
         public void cell(String cellReference, String formattedValue,
                          XSSFComment comment) {
             if (firstCellOfRow) {
