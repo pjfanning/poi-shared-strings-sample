@@ -9,12 +9,9 @@ mainClassName = 'com.github.pjfanning.poi.sample.XLSX2CSV'
 
 repositories {
     mavenCentral()
-    maven {
-        url "https://oss.sonatype.org/content/repositories/releases/"
-    }
 }
 
 dependencies {
-    compile 'org.apache.poi:poi-ooxml:4.0.1'
-    compile 'com.github.pjfanning:poi-shared-strings:1.0.1'
+    compile 'org.apache.poi:poi-ooxml:4.1.0'
+    compile 'com.github.pjfanning:poi-shared-strings:1.0.2'
 }
