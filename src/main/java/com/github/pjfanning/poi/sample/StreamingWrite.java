@@ -17,9 +17,6 @@ public class StreamingWrite {
 
     public static void main(String[] args) {
         // the SXSSFFactory ensures that TempFileSharedStringsTable is used instead of the in-memory default
-        // the SXSSFFactory `true` parameter means the temp file data is encrypted
-        // the final SXSSFWorkbook `true` parameter means that SXSSFWorkbook will use shared strings
-        // if you set this `useSharedStringsTable` to false then you don't really need poi-shared-strings
         try (SXSSFWorkbook wb = new SXSSFWorkbook(new XSSFWorkbook(new SXSSFFactory().encryptTempFiles(true)),
                 SXSSFWorkbook.DEFAULT_WINDOW_SIZE, true, true)) {
             SXSSFSheet sheet = wb.createSheet("SheetA");
