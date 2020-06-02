@@ -1,6 +1,7 @@
 package com.github.pjfanning.poi.sample;
 
 import com.github.pjfanning.poi.xssf.streaming.SXSSFFactory;
+import org.apache.commons.compress.archivers.zip.Zip64Mode;
 import org.apache.poi.xssf.streaming.SXSSFCell;
 import org.apache.poi.xssf.streaming.SXSSFRow;
 import org.apache.poi.xssf.streaming.SXSSFSheet;
@@ -19,6 +20,7 @@ public class StreamingWrite {
         // the SXSSFFactory ensures that TempFileSharedStringsTable is used instead of the in-memory default
         try (SXSSFWorkbook wb = new SXSSFWorkbook(new XSSFWorkbook(new SXSSFFactory().encryptTempFiles(true)),
                 SXSSFWorkbook.DEFAULT_WINDOW_SIZE, true, true)) {
+            wb.setZip64Mode(Zip64Mode.Always);
             SXSSFSheet sheet = wb.createSheet("SheetA");
             for (int r = 0; r < ROWS; r++) {
                 SXSSFRow row = sheet.createRow(r);
