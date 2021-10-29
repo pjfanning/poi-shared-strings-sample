@@ -15,6 +15,6 @@ dependencies {
     implementation 'org.apache.poi:poi-ooxml:5.0.0'
     //poi-ooxml-full is needed to run StreamingWrite test
     //implementation 'org.apache.poi:poi-ooxml-full:5.0.0'
-    implementation 'com.github.pjfanning:poi-shared-strings:2.1.0'
+    implementation 'com.github.pjfanning:poi-shared-strings:2.1.1'
     runtimeOnly 'org.slf4j:slf4j-simple:1.7.32'
 }
