@@ -213,9 +213,12 @@ public class XLSX2CSV {
         }
 
         // The package open is instantaneous, as it should be.
-        try (OPCPackage p = OPCPackage.open(xlsxFile.getPath(), PackageAccess.READ)) {
+        OPCPackage p = OPCPackage.open(xlsxFile.getPath(), PackageAccess.READ);
+        try {
             XLSX2CSV xlsx2csv = new XLSX2CSV(p, System.out, minColumns);
             xlsx2csv.process();
+        } finally {
+            p.revert();
         }
     }
 }

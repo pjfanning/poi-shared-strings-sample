@@ -4,8 +4,8 @@ apply plugin: 'java'
 group = 'com.github.pjfanning'
 version = '0.1.0'
 
-//mainClassName = 'com.github.pjfanning.poi.sample.XLSX2CSV'
-mainClassName = 'com.github.pjfanning.poi.sample.StreamingWrite'
+mainClassName = 'com.github.pjfanning.poi.sample.XLSX2CSV'
+//mainClassName = 'com.github.pjfanning.poi.sample.StreamingWrite'
 
 repositories {
     mavenCentral()
