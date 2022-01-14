@@ -20,6 +20,7 @@ public class StreamingWrite {
     public static void main(String[] args) {
         SXSSFFactory sxssfFactory = new SXSSFFactory()
                 .enableTempFileSharedStrings(true)
+                .enableTempFileComments(true)
                 .encryptTempFiles(true);
         try (SXSSFWorkbook wb = new SXSSFWorkbook(new XSSFWorkbook(sxssfFactory),
                 SXSSFWorkbook.DEFAULT_WINDOW_SIZE, true, true)) {
