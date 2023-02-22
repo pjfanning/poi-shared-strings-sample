@@ -8,3 +8,5 @@
 hs_err_pid*
 
 poi-shared-strings-sample.iml
+
+.gradle/
