@@ -13,9 +13,9 @@ import java.io.FileOutputStream;
 import java.util.UUID;
 
 public class StreamingWrite {
-    private static String OUTPUT_FILENAME = "StreamingWrite.xlsx";
-    private static int ROWS = 1000;
-    private static int COLUMNS = 10;
+    private static final String OUTPUT_FILENAME = "StreamingWrite.xlsx";
+    private static final int ROWS = 1000;
+    private static final int COLUMNS = 10;
 
     public static void main(String[] args) {
         SXSSFFactory sxssfFactory = new SXSSFFactory()
