@@ -4,6 +4,7 @@ import com.github.pjfanning.poi.xssf.streaming.TempFileSharedStringsTable;
 import org.apache.poi.openxml4j.exceptions.OpenXML4JException;
 import org.apache.poi.openxml4j.opc.OPCPackage;
 import org.apache.poi.openxml4j.opc.PackageAccess;
+import org.apache.poi.ss.usermodel.Comment;
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.util.CellAddress;
 import org.apache.poi.ss.util.CellReference;
@@ -14,7 +15,6 @@ import org.apache.poi.xssf.eventusermodel.XSSFSheetXMLHandler.SheetContentsHandl
 import org.apache.poi.xssf.model.SharedStrings;
 import org.apache.poi.xssf.model.Styles;
 import org.apache.poi.xssf.model.StylesTable;
-import org.apache.poi.xssf.usermodel.XSSFComment;
 import org.xml.sax.ContentHandler;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
@@ -76,7 +76,7 @@ public class XLSX2CSV {
 
         @Override
         public void cell(String cellReference, String formattedValue,
-                         XSSFComment comment) {
+                         Comment comment) {
             if (firstCellOfRow) {
                 firstCellOfRow = false;
             } else {

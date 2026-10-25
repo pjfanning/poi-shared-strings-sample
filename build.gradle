@@ -1,20 +1,27 @@
-apply plugin: 'application'
-apply plugin: 'java'
+plugins {
+    id 'application'
+    id 'java'
+}
 
 group = 'com.github.pjfanning'
 version = '0.1.0'
 
-mainClassName = 'com.github.pjfanning.poi.sample.XLSX2CSV'
-//mainClassName = 'com.github.pjfanning.poi.sample.StreamingWrite'
+tasks.withType(JavaCompile).configureEach {
+    options.release = 17
+}
+
+application {
+    mainClass = 'com.github.pjfanning.poi.sample.XLSX2CSV'
+    //mainClass = 'com.github.pjfanning.poi.sample.StreamingWrite'
+}
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    implementation 'org.apache.poi:poi-ooxml:5.5.1'
-    implementation 'com.github.pjfanning:poi-shared-strings:2.10.0'
-    runtimeOnly 'org.apache.logging.log4j:log4j-to-slf4j:2.25.2'
-    runtimeOnly 'org.slf4j:slf4j-simple:2.0.17'
+    implementation 'org.apache.poi:poi-ooxml:6.0.0'
+    implementation 'com.github.pjfanning:poi-shared-strings:3.0.0'
+    runtimeOnly 'org.apache.logging.log4j:log4j-to-slf4j:2.26.1'
+    runtimeOnly 'org.slf4j:slf4j-simple:2.0.20'
 }
-
